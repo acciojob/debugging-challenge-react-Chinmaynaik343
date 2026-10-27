@@ -1,17 +1,20 @@
-import React, { useEffect, useState } from "react";
-import '../styles/App.css';
 
-const App = () => {
+import React from "react";
+import "./../styles/App.css";
 
-  let [count, setCount] = useState(0)
-
+function App() {
   return (
-    <div class="ball">
-      <h1 class="count" ondoubleclick={() => { alert("cant edit it") }}>{count}</h1>
-      <button class='increment-button' onclick={() => { setCount(count + 1) }}>Increment</button>
-    </div>
-  )
-}
+    <div className="main-container">
+      <h1>JSX Keyword Replacement Challenge</h1>
 
+      <label htmlFor="username">Enter your name:</label>
+      <input id="username" type="text" />
+
+      <button onClick={() => alert("Button clicked!")}>
+        Click Me
+      </button>
+    </div>
+  );
+}
 
 export default App;
